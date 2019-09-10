@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var person_1 = require("./models/person");
 var Client_1 = require("./models/Client");
 var ISAdmin_1 = require("./models/ISAdmin");
+var Dog_1 = require("./models/Dog");
+var Cat_1 = require("./models/Cat");
 function sayHello() {
     console.log('Hello');
 }
@@ -39,9 +41,9 @@ console.log('date.toDateString(): ', date.toDateString());
 console.log('client.date.toDateString(): ', client.date.toDateString());
 console.log('Cliente: ', client);
 //Pratica 4
-client.pets = [];
+/*lient.pets = [];
 client.pets.name = 'Toze';
-console.log('Cliente: ', client);
+console.log('Cliente: ',client);*/
 //Pratica 5
 function optionalParam(param1, param2) {
     if (param1 == undefined && param2 == undefined) {
@@ -80,3 +82,8 @@ console.log(cliente1.getIsAdmin());
 var admin1 = new ISAdmin_1.ISAdmin(1, 74, 'Carla', 'Gomes', new Date());
 admin1.printData();
 console.log(admin1.getIsAdmin());
+//10-9 Exercicio dos Animais
+var dog = new Dog_1.Dog(new Date(), 'Labrador', 'Max');
+console.log(dog.greet());
+var cat = new Cat_1.Cat(new Date(), 'Rafeiro', 'Toze');
+console.log(cat.greet());

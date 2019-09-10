@@ -1,6 +1,8 @@
 import {Person} from './models/person';
 import {Client} from './models/Client';
 import {ISAdmin} from './models/ISAdmin';
+import { Dog } from './models/Dog';
+import { Cat } from './models/Cat';
 function sayHello(): void {
     console.log('Hello');
 }
@@ -44,9 +46,9 @@ console.log('client.date.toDateString(): ',client.date.toDateString());
 console.log('Cliente: ',client);
 
 //Pratica 4
-client.pets = [];
+/*lient.pets = [];
 client.pets.name = 'Toze';
-console.log('Cliente: ',client);
+console.log('Cliente: ',client);*/
 
 //Pratica 5
 function optionalParam (param1?: any, param2?: any): string {
@@ -87,3 +89,9 @@ console.log(cliente1.getIsAdmin());
 var admin1 = new ISAdmin(1, 74, 'Carla', 'Gomes', new Date());
 admin1.printData();
 console.log(admin1.getIsAdmin());
+
+//10-9 Exercicio dos Animais
+var dog = new Dog(new Date(), 'Labrador', 'Max');
+console.log(dog.greet());
+var cat = new Cat(new Date(), 'Rafeiro', 'Toze');
+console.log(cat.greet());
